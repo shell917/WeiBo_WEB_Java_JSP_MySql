@@ -1,0 +1,53 @@
+//1.创建wb数据库
+create database wb;
+
+
+//2.邮箱注册表
+create table emailUser
+(  
+   email varchar(30) unique,
+   password varchar(20),
+   honeyname varchar(30),
+   sex varchar(5),   
+   country varchar(20),                  
+   city varchar(20),
+   school varchar(20),
+   name varchar(20),                      
+   id_number varchar(18),
+   registeTime datetime,
+   user_id int primary key auto_increment,
+   memo varchar(50)); 
+                 
+insert into emailUser(email,password,honeyname,sex,city,school,name,id_number,memu) values("123@qq.com","123","xiaoxiao","女","山西","太原理工大学","陈潇","142201199301232314",null);
+
+//3.手机注册表
+create table phoneUser
+(  
+   phone varchar(30) unique,
+   password varchar(20),
+   honeyname varchar(30),
+   sex varchar(5),   
+   country varchar(20),                  
+   city varchar(20),               
+   id_number varchar(18),
+   registeTime datetime,
+   user_id int primary key auto_increment,
+   memo varchar(50)); 
+                 
+insert into phoneUser(phone,password,honeyname,sex,city,school,name,id_number,memu) values("123@qq.com","123","xiaoxiao","女","山西","太原理工大学","陈潇","142201199301232314",null);
+
+//4.广播表
+create table broadcast
+(
+ title varchar(20),
+ publishTime datetime,
+ broadcastContent varchar(500), 
+ broadcast_id int primary key auto_increment,
+ memo varchar(50)  
+);
+
+//5.广播内容
+One of the most misunderstood constructs in the Verilog language is the nonblocking 
+assignment.Even very experienced Verilog designers do not fully understand how 
+nonblocking assignments are scheduled in an IEEE compliant Verilog simulator 
+and do not understand when and why nonblocking assignments should be used.
